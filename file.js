@@ -1,9 +1,15 @@
-let user = {
-    name: "Іван",
-    age: 30
-  };
-  
-  let key = prompt("Що ви хочете знати про користувача?", "name");
-  
-  // доступ до властивості через змінну
-  alert( user[key] ); // Іван (якщо ввести "name")
+var personObject = {
+    firstName : "John",
+    lastName : "Smith"
+}
+personObject.age = 23;
+personObject["salary"] = 14000;
+
+
+for (var member in personObject)
+{
+    if (personObject.hasOwnProperty(member))
+    {
+        console.log("the member " + member + " of personObject is " + personObject[member])
+    }
+}
